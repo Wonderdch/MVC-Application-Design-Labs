@@ -1,4 +1,6 @@
 ﻿using System;
+using ModelDesignLab.Models;
+using System.Linq;
 
 namespace ModelDesignLab
 {
@@ -6,7 +8,14 @@ namespace ModelDesignLab
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using (var dbContext = new sakilaContext())
+            {
+                var actors = dbContext.Actor.ToList();
+                foreach (var a in actors)
+                {
+                    Console.WriteLine($"ID:{a.ActorId} Name:{a.FirstName} {a.LastName}");
+                }
+            }
         }
     }
 }
