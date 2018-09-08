@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/ModelDesignLab/ModelDesignLab.csproj"
+                "${workspaceFolder}/Projects/HelloMVC/HelloMVC.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
